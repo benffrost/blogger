@@ -8,7 +8,7 @@ let port = 3000
 
 let server = express()
 
-server.use(bp.json())
+server.use(bp.json({ limit: '50mb' }))
 
 //TODO import & register routes here
 let path = __dirname + '/../public/'
